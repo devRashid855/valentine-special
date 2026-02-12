@@ -10,7 +10,7 @@
    - Example: file:///path/to/index.html?preview=true
    - This will always bypass the date lock
    ========================================== */
-const TEST_DATE =  "2026-02-13T23:59:00"; // Set to null to use real current date "2026-02-14T23:59:00" for testing, or "2026-02-10T12:00:00" to test countdown
+const TEST_DATE =  ""; // Set to null to use real current date "2026-02-14T23:59:00" for testing, or "2026-02-10T12:00:00" to test countdown
 
 const loveMessage = "Boss, from the day you came into my life... everything changed ❤️ You make every moment special, Srial. I never want to imagine a future without you, my Khroos. Your MR Noyan will always be here, loving you endlessly! 💕";
 /* COLOR THEME SYSTEM */
