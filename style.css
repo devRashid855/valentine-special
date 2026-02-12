@@ -355,6 +355,50 @@ button:active {
     to { opacity: 1; transform: scale(1); }
 }
 
+/* Flower Bouquet Styles */
+.flower-bouquet {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+}
+
+.flower {
+    font-size: 50px;
+    display: inline-block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.flower:hover {
+    transform: scale(1.2) rotate(10deg);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+}
+
+@keyframes flowerGrow {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes flowerSway {
+    0%, 100% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
 /* Glow effect */
 .glow {
     font-size: 54px;
@@ -878,6 +922,15 @@ button:active {
 
     .color-option p {
         font-size: 14px;
+    }
+
+    .flower-bouquet {
+        padding: 20px;
+        margin: 20px 10px;
+    }
+
+    .flower {
+        font-size: 35px;
     }
 }
 
