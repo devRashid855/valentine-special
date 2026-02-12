@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For My Boss ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<canvas id="fireworks"></canvas>
+
+<div class="petals"></div>
+
+<div id="dateLock" class="container">
+    <h1 class="glow">🔒 Locked Until Day comes 🔒</h1>
+    <h2 style="font-size: 26px; margin-top: 20px; line-height: 1.5;">Boss, this is special... just for you! ❤️</h2>
+    <div id="countdown" style="margin-top: 40px;">
+        <h3 style="font-size: 22px; margin-bottom: 20px;">Time until your surprise:</h3>
+        <div class="countdown-timer">
+            <div class="time-box">
+                <span id="days">0</span>
+                <p>Days</p>
+            </div>
+            <div class="time-box">
+                <span id="hours">0</span>
+                <p>Hours</p>
+            </div>
+            <div class="time-box">
+                <span id="minutes">0</span>
+                <p>Minutes</p>
+            </div>
+            <div class="time-box">
+                <span id="seconds">0</span>
+                <p>Seconds</p>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: 30px; padding: 25px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 20px; max-width: 600px; margin-left: auto; margin-right: auto; border: 2px solid rgba(255, 255, 255, 0.3);">
+        <p style="font-size: 20px; font-weight: 600; line-height: 1.6;">Can't wait to show you this, Srial...</p>
+        <p style="font-size: 22px; font-weight: 700; margin-top: 10px;">Your <strong style="color: #ffeb3b; font-size: 24px;">MR Noyan</strong> has something special waiting! 💕</p>
+    </div>
+</div>
+
+<div class="container hidden" id="mainContainer">
+    <h1 id="message" class="typewriter">Hey Misha ❤️</h1>
+    <p style="font-size: 16px; margin-top: 15px; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Something special is waiting for you, Boss... 💕
+    </p>
+
+    <button class="secret-btn" onclick="window.showSecret()" style="margin: 20px auto; padding: 12px 30px; font-size: 16px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: 2px solid white; border-radius: 25px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);">
+        💌 Read Secret Message
+    </button>
+
+    <div class="color-chooser">
+        <h3>Choose Your Favorite Color Theme, Boss:</h3>
+        <div class="color-options">
+            <div class="color-option" data-theme="valentine" onclick="changeTheme('valentine')">
+                <div class="color-box valentine-color"></div>
+                <p>Valentine</p>
+            </div>
+            <div class="color-option" data-theme="black" onclick="changeTheme('black')">
+                <div class="color-box black-color"></div>
+                <p>Black</p>
+            </div>
+            <div class="color-option" data-theme="royal-blue" onclick="changeTheme('royal-blue')">
+                <div class="color-box royal-blue-color"></div>
+                <p>Royal Blue</p>
+            </div>
+        </div>
+    </div>
+
+    <button id="mainBtn" onclick="startProposal()">Click Me 💌</button>
+
+    <div id="proposal" class="hidden">
+        <h2 id="loveText"></h2>
+        <h2>Will you be my Valentine forever?</h2>
+
+        <div class="buttons">
+            <button class="yes-btn" onclick="sayYes()">YES ❤️</button>
+            <button class="no-btn" id="noBtn">NO 😜</button>
+        </div>
+    </div>
+</div>
+
+<div id="secretMessage" class="secret-popup hidden" onclick="if(event.target === this) this.classList.add('hidden')">
+    <div class="secret-content">
+        <h3>Secret Message for My Boss 💕</h3>
+        <p>Every moment with you feels like a dream come true, Misha.</p>
+        <p><strong>You call me MR Noyan, Changez Khan, Hitler, and Halaaku Khan...</strong></p>
+        <p style="font-size: 19px; font-weight: bold; color: #ffeb3b;">All these powerful names... 👑</p>
+        <p style="font-size: 20px; font-weight: bold;">But with you, Boss, I'm completely powerless! 🥰</p>
+        <p style="font-size: 18px; font-weight: 600;">I'm madly, crazily, hopelessly YOURS!</p>
+        <p style="margin-top: 15px; font-weight: bold; font-size: 20px; color: #ffeb3b;">You're not just my Valentine... you're my FOREVER, Srial!</p>
+        <p style="font-weight: bold; font-size: 18px; margin-top: 10px;">You're stuck with me forever, Khroos! 😘</p>
+        <button onclick="document.getElementById('secretMessage').classList.add('hidden'); event.stopPropagation();">Close 💖</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
