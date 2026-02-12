@@ -174,6 +174,22 @@ function startProposal() {
 
     document.getElementById("mainBtn").style.display = "none";
 
+    // Hide flowers and color chooser
+    const flowerBouquet = document.querySelector(".flower-bouquet");
+    if (flowerBouquet) {
+        flowerBouquet.style.display = "none";
+    }
+
+    const colorChooser = document.querySelector(".color-chooser");
+    if (colorChooser) {
+        colorChooser.style.display = "none";
+    }
+
+    const secretBtn = document.querySelector(".secret-btn");
+    if (secretBtn) {
+        secretBtn.style.display = "none";
+    }
+
     const proposal = document.getElementById("proposal");
     proposal.classList.remove("hidden");
     proposal.classList.add("fade-in");
