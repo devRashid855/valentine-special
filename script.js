@@ -231,6 +231,19 @@ function sayYes() {
 
     proposal.innerHTML = `
         <div class="final-screen fade-in">
+            <!-- Song Selection Buttons at Top -->
+            <div style="margin-bottom: 30px; padding: 20px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3)); backdrop-filter: blur(15px); border-radius: 20px; border: 2px solid rgba(255, 255, 255, 0.4); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);">
+                <p style="font-size: 18px; font-weight: 600; color: #ffeb3b; margin-bottom: 15px;">🎵 Choose Your Song 🎵</p>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <button onclick="playSong(1)" id="songBtn1" style="padding: 12px 25px; font-size: 16px; font-weight: 600; background: linear-gradient(135deg, #ff4b5c, #ff758c); color: white; border: 3px solid white; border-radius: 25px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 75, 92, 0.4);">
+                        🎵 Chalo Door Kahin
+                    </button>
+                    <button onclick="playSong(2)" id="songBtn2" style="padding: 12px 25px; font-size: 16px; font-weight: 600; background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)); color: white; border: 3px solid rgba(255, 255, 255, 0.5); border-radius: 25px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                        💕 Family Di Member
+                    </button>
+                </div>
+            </div>
+
             <h1 class="glow">My Boss ❤️</h1>
             <h2>You are my today and all of my tomorrows.</h2>
             <h2>With you, life feels complete.</h2>
@@ -338,12 +351,54 @@ function sayYes() {
                     <p style="font-size: 22px; font-weight: bold; color: #ffeb3b; margin-top: 8px;">But the truth is... I'm completely YOURS! 💕</p>
                     <p style="font-size: 18px; font-style: italic; margin-top: 10px; opacity: 0.9;">You own my heart, my soul, everything, Boss! 🥰</p>
                 </div>
+
+                <!-- Prayer & Belief Highlight -->
+                <div style="margin-top: 35px; padding: 30px; background: linear-gradient(135deg, rgba(255, 215, 0, 0.25), rgba(255, 107, 107, 0.25)); backdrop-filter: blur(20px); border-radius: 25px; border: 3px solid #ffeb3b; box-shadow: 0 0 30px rgba(255, 235, 59, 0.5), 0 10px 40px rgba(0, 0, 0, 0.3);">
+                    <h3 style="font-size: 26px; font-weight: 700; color: #ffeb3b; margin-bottom: 20px; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);">My Prayer for You, Boss 🙏✨</h3>
+                    <p style="font-size: 19px; line-height: 1.8; font-weight: 600; margin: 15px 0;">
+                        I pray that you <strong style="color: #ffeb3b; font-size: 21px;">win in your life</strong>, achieve all your dreams.
+                    </p>
+                    <p style="font-size: 19px; line-height: 1.8; font-weight: 600; margin: 15px 0;">
+                        I really wanna see you <strong style="color: #ffeb3b; font-size: 21px;">on top</strong>, and become the person you wanted to.
+                    </p>
+                    <p style="font-size: 23px; line-height: 1.8; font-weight: 700; color: #ffeb3b; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); margin-top: 20px;">
+                        I believe in you, Misha! 💪❤️
+                    </p>
+                </div>
+
+                <!-- Dedicated Songs Section -->
+                <div style="margin-top: 40px; padding: 35px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3)); backdrop-filter: blur(20px); border-radius: 25px; border: 3px solid rgba(255, 255, 255, 0.5); box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);">
+                    <h3 style="font-size: 28px; font-weight: 700; color: #ffeb3b; margin-bottom: 20px; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);">🎵 Now Playing 🎵</h3>
+
+                    <!-- Current Song Title -->
+                    <p id="currentSongTitle" style="font-size: 20px; margin-bottom: 20px; font-weight: 600; color: #ffeb3b;">"Chalo Door Kahin" - Samar Jafri</p>
+
+                    <!-- Video Player -->
+                    <div style="position: relative; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); margin: 20px 0;">
+                        <video id="dedicatedSongVideo" controls autoplay style="width: 100%; height: auto; display: block; border-radius: 15px; background: #000;">
+                            <source id="videoSource" src="Samar Jafri - Chalo Door Kahin (Lyrics).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p style="font-size: 17px; margin-top: 20px; line-height: 1.7; color: white;">These songs are for you, Srial. Every word, every note... it's all for you! 🎶💕</p>
+                </div>
             </div>
         </div>
     `;
 
     startFireworks();
     createHearts();
+
+    // Start the dedicated song video after a short delay
+    setTimeout(() => {
+        const video = document.getElementById('dedicatedSongVideo');
+        if (video) {
+            video.play().catch(err => {
+                console.log('Video autoplay prevented:', err);
+                // Autoplay was prevented, user will need to click play
+            });
+        }
+    }, 1000);
 }
 
 /* REVEAL PROMISE CARD */
@@ -546,3 +601,47 @@ function triggerSuperLove() {
 
     alert("💖 SUPER LOVE MODE ACTIVATED! 💖\nBoss, you found the secret! You're amazing! 🥰");
 }
+
+/* SONG PLAYER FUNCTIONS */
+function playSong(songNumber) {
+    const video = document.getElementById('dedicatedSongVideo');
+    const videoSource = document.getElementById('videoSource');
+    const songTitle = document.getElementById('currentSongTitle');
+    const btn1 = document.getElementById('songBtn1');
+    const btn2 = document.getElementById('songBtn2');
+
+    if (songNumber === 1) {
+        // Chalo Door Kahin
+        videoSource.src = "Samar Jafri - Chalo Door Kahin (Lyrics).mp4";
+        songTitle.textContent = '"Chalo Door Kahin" - Samar Jafri';
+
+        // Update button styles
+        btn1.style.background = 'linear-gradient(135deg, #ff4b5c, #ff758c)';
+        btn1.style.border = '3px solid white';
+        btn1.style.boxShadow = '0 4px 15px rgba(255, 75, 92, 0.4)';
+
+        btn2.style.background = 'linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1))';
+        btn2.style.border = '3px solid rgba(255, 255, 255, 0.5)';
+        btn2.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)';
+    } else if (songNumber === 2) {
+        // Family Di Member
+        videoSource.src = "Family Di Member _ Parahuna 2 _ Ranjit Bawa _ Tara Sumner _ Ajay Hooda _ Romantic Punjabi Song.mp4";
+        songTitle.textContent = '"Family Di Member" - Ranjit Bawa';
+
+        // Update button styles
+        btn2.style.background = 'linear-gradient(135deg, #ff4b5c, #ff758c)';
+        btn2.style.border = '3px solid white';
+        btn2.style.boxShadow = '0 4px 15px rgba(255, 75, 92, 0.4)';
+
+        btn1.style.background = 'linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1))';
+        btn1.style.border = '3px solid rgba(255, 255, 255, 0.5)';
+        btn1.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)';
+    }
+
+    // Reload and play the new video
+    video.load();
+    video.play().catch(err => {
+        console.log('Video autoplay prevented:', err);
+    });
+}
+
