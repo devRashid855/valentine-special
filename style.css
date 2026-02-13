@@ -467,6 +467,26 @@ button:active {
     }
 }
 
+/* Dedicated Song Responsive Embed */
+.dedicated-song-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.dedicated-song-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
 .valentine {
     margin-top: 30px;
     font-size: 26px;
@@ -932,6 +952,23 @@ button:active {
     .flower {
         font-size: 35px;
     }
+
+    .prayer-highlight {
+        padding: 20px !important;
+        margin: 20px 10px !important;
+    }
+
+    .prayer-highlight h3 {
+        font-size: 20px !important;
+    }
+
+    .prayer-highlight p {
+        font-size: 16px !important;
+    }
+
+    .prayer-highlight strong {
+        font-size: 17px !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1070,6 +1107,23 @@ button:active {
 
     .secret-content p {
         font-size: 14px !important;
+    }
+
+    .prayer-highlight {
+        padding: 15px !important;
+        margin: 15px 5px !important;
+    }
+
+    .prayer-highlight h3 {
+        font-size: 18px !important;
+    }
+
+    .prayer-highlight p {
+        font-size: 14px !important;
+    }
+
+    .prayer-highlight strong {
+        font-size: 15px !important;
     }
 }
 
