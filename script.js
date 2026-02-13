@@ -366,6 +366,20 @@ function sayYes() {
                     </p>
                 </div>
 
+                <!-- Hair Touching Highlight - Special Permission -->
+                <div style="margin-top: 35px; padding: 30px; background: linear-gradient(135deg, rgba(255, 105, 180, 0.3), rgba(255, 182, 193, 0.3)); backdrop-filter: blur(20px); border-radius: 25px; border: 3px solid #ff69b4; box-shadow: 0 0 30px rgba(255, 105, 180, 0.5), 0 10px 40px rgba(0, 0, 0, 0.3); animation: glowPulse 3s ease-in-out infinite;">
+                    <h3 style="font-size: 26px; font-weight: 700; color: #ffeb3b; margin-bottom: 20px; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);">💇‍♂️ Special Permission Only for You 💕</h3>
+                    <p style="font-size: 20px; line-height: 1.8; font-weight: 600; margin: 15px 0;">
+                        I <strong style="color: #ff69b4; font-size: 22px;">HATE</strong> when people touch my hair...
+                    </p>
+                    <p style="font-size: 24px; line-height: 1.8; font-weight: 700; color: #ffeb3b; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); margin-top: 15px;">
+                        But YOU are the ONLY ONE allowed, Boss! 🥰
+                    </p>
+                    <p style="font-size: 18px; font-style: italic; margin-top: 15px; opacity: 0.95;">
+                        You have special privileges... because you're MY Boss! 💕👑
+                    </p>
+                </div>
+
                 <!-- Dedicated Songs Section -->
                 <div style="margin-top: 40px; padding: 35px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3)); backdrop-filter: blur(20px); border-radius: 25px; border: 3px solid rgba(255, 255, 255, 0.5); box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);">
                     <h3 style="font-size: 28px; font-weight: 700; color: #ffeb3b; margin-bottom: 20px; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);">🎵 Now Playing 🎵</h3>
