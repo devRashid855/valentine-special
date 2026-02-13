@@ -151,10 +151,10 @@ function startCountdown(targetDate) {
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-        document.getElementById("days").textContent = days > 10 ? days : "0" + days;
-        document.getElementById("hours").textContent = hours > 10 ? hours : "0" + hours;
-        document.getElementById("minutes").textContent = minutes > 10 ? minutes : "0" + minutes;
-        document.getElementById("seconds").textContent = seconds > 10 ? seconds : "0" + seconds;
+        document.getElementById("days").textContent = days > 9 ? days : "0" + days;
+        document.getElementById("hours").textContent = hours > 9 ? hours : "0" + hours;
+        document.getElementById("minutes").textContent = minutes > 9 ? minutes : "0" + minutes;
+        document.getElementById("seconds").textContent = seconds > 9 ? seconds : "0" + seconds;
     }
 
     updateCountdown();
